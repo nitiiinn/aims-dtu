@@ -12,10 +12,8 @@ from dotenv import load_dotenv
 # Setup configurations
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 
 groq_client = groq.Groq(api_key=GROQ_API_KEY)
-nvidia_client = OpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=NVIDIA_API_KEY)
 ollama_client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 # ==========================================
