@@ -1,4 +1,9 @@
 venv/
 __pycache__/
 *.py[cod]
+corpus_pdfs/
 .env
+eval/
+predictions/
+index/chroma_db/
+*.pdf

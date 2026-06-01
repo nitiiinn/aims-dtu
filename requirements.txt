@@ -1,0 +1,17 @@
+requests>=2.28
+tqdm
+PyPDF2
+sentence-transformers
+faiss-cpu
+numpy
+scikit-learn
+chromadb
+langgraph
+langchain-core
+langchain-groq
+langchain-google-genai
+google-genai
+google-generativeai
+openai
+groq
+python-dotenv
