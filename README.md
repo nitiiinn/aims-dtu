@@ -61,8 +61,7 @@ Question → Planner → Retriever → Reflector → Synthesizer → Verifier �
 │   ├── questions.jsonl             # 30 research questions (factoid/comparative/survey)
 │   ├── local_ground_truth.jsonl    # Reference answers (generated via Groq Llama 3.3 70B)
 │   ├── evaluate.py                 # Automated grading (citation P/R/F1 + LLM judge)
-│   ├── seed_ground_truth.py        # Generate ground truth from Groq + ChromaDB chunks
-│   └── SUBMISSION_FORMAT.md
+│   └── seed_ground_truth.py        # Generate ground truth from Groq + ChromaDB chunks
 │
 ├── predictions/                    # Model outputs (one per config)
 │   ├── baseline.jsonl
