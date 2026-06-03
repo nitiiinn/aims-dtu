@@ -1,6 +1,10 @@
+import os
 import pandas as pd
 import json
 
+# Ensure we run from project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(PROJECT_ROOT)
 def rank_and_filter_corpus(input_file="eval/corpus_metadata.json", output_file="eval/corpus_metadata_filtered.json", top_n=800):
     # 1. Load the raw metadata
     try:

@@ -5,8 +5,12 @@ import urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 
+# Ensure we run from project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(PROJECT_ROOT)
+
 # Constants
-METADATA_FILE = "C:/Users/Nitin/Desktop/aims-dtu/eval/corpus_metadata_filtered.json"
+METADATA_FILE = "eval/corpus_metadata_filtered.json"
 OUTPUT_DIR = "corpus_pdfs"
 MAX_WORKERS = 5 # arXiv might rate-limit if this is too high; 5 is usually safe.
 

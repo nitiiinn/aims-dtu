@@ -1,7 +1,12 @@
+import os
 import arxiv
 import datetime
 import pandas as pd
 from tqdm import tqdm
+
+# Ensure we run from project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(PROJECT_ROOT)
 
 def collect_agent_corpus():
     # 1. Define your exact boundaries
