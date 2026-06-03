@@ -16,7 +16,7 @@ eval/parsed_texts.jsonl
 eval/local_ground_truth.jsonl
 
 # Generated outputs
-predictions/
+
 *.pdf
 llm_cache.json
 generate_report.py
