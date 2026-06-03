@@ -13,6 +13,7 @@ eval/corpus_metadata.json
 eval/corpus_metadata_filtered.json
 eval/corpus_chunks.jsonl
 eval/parsed_texts.jsonl
+eval/local_ground_truth.jsonl
 
 # Generated outputs
 predictions/
