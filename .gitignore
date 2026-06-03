@@ -1,9 +1,25 @@
+# Python
 venv/
 __pycache__/
 *.py[cod]
-corpus_pdfs/
+
+# Secrets
 .env
-eval/
-predictions/
+
+# Large data files
+corpus_pdfs/
 index/chroma_db/
+eval/corpus_metadata.json
+eval/corpus_metadata_filtered.json
+eval/corpus_chunks.jsonl
+eval/parsed_texts.jsonl
+
+# Generated outputs
+predictions/
 *.pdf
+llm_cache.json
+generate_report.py
+
+# IDE
+.vscode/
+.idea/
