@@ -5,7 +5,6 @@ from typing import List, Dict, Any, Tuple
 from dotenv import load_dotenv
 load_dotenv()
 
-# pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 import chromadb
 from openai import OpenAI

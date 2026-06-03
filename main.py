@@ -77,12 +77,19 @@ def main():
                 q_text = q_obj["question"]
                 q_type = q_obj.get("type", "factoid")
                 
-                # Execute the agent block
                 try:
                     result = run_agent(q_text, config_flags, question_type=q_type)
                     
                     # Extract the cited papers natively from the LLM's generated brackets
                     cited_papers = extract_citations(result["final_answer"])
+                    
+                    # Fallback: if the LLM didn't produce inline citations,
+                    # use the arxiv_ids from the retrieved chunks it was given
+                    if not cited_papers and result.get("retrieved_chunks"):
+                        cited_papers = list(set(
+                            c["arxiv_id"] for c in result["retrieved_chunks"]
+                            if c.get("arxiv_id") and c["arxiv_id"] != "UNKNOWN"
+                        ))
                     
                     # Aligning exactly with eval/SUBMISSION_FORMAT.md requirements
                     prediction_obj = {

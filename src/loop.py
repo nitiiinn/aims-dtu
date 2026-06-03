@@ -79,7 +79,8 @@ def run_agent(question: str, config: dict, question_type: str = "factoid") -> di
         "final_answer": draft_answer,
         "verification_passed": verification_passed,
         "loops_taken": loop_count,
-        "chunks_used": len(accumulated_chunks)
+        "chunks_used": len(accumulated_chunks),
+        "retrieved_chunks": accumulated_chunks
     }
 
 if __name__ == "__main__":
